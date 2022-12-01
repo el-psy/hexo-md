@@ -1,0 +1,17 @@
+<article class="archive-article article-card">
+  <div class="archive-article-upper">
+    <div class="post-meta">
+      <%- partial('post/date', {date_format: config.date_format}) %>
+      <%- partial('post/category') %>
+    </div>
+    <div class="archive-article-inner">
+      <%- partial('post/title', {
+        hasLink: true
+      }) %>
+      
+    </div>
+  </div>
+  <div class="tag-container">
+    <%- partial('post/tag') %>
+  </div>
+</article>

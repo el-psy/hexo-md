@@ -1,0 +1,22 @@
+# html lang
+language: en
+
+title: shesi
+author: shesi
+
+# index page navigation
+menu:
+  Home:
+    path: /
+  Archives:
+    path: /archives
+  About:
+    path: /about
+
+social:
+  github:
+    icon: fa-github-alt 
+    url: https://github.com/MRsoymilk
+  gmail:
+    icon: fa-envelope
+    url: mailto:codermrsoymilk@gmail.com

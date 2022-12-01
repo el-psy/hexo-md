@@ -1,0 +1,238 @@
+.post-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.post-list-item {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    // padding: 10px 10px;
+    border-bottom: 1px solid @borderColor;
+    background-color: #fff;
+}
+
+.post-time {
+    font-size: 13px;
+    font-weight: bold;
+    color: @secondaryTextColor
+}
+
+.post-title {
+    margin: 0 0 16px;
+}
+
+
+.post-title-link {
+    color: @primaryColor;
+    .hoverLine(@primaryColor);
+}
+
+.post-meta {
+    margin: 0 0 16px 0;
+    line-height: 14px;
+    font-size: 13px;
+    overflow: hidden;
+    color: @borderColor;
+}
+
+.article-category-list {
+    position: relative;
+    display: inline;
+    list-style: none;
+    padding: 0 0 0 0px;
+    font-weight: bold;
+
+    &:before {
+        content: "·";
+        padding: 0.5em;
+        // display: inline-block;
+        // vertical-align: middle;
+        // margin-right: 10px;
+        // height: 10px;
+        // width: 1px;
+        // background: @borderColor;
+        // background-color: transparent;
+        font-weight: bold;
+    }
+
+    .article-category-list-child {
+        padding: 0 0 0 16px;
+        display: inline;
+    }
+
+    li {
+        display: inline;
+    }
+    a {
+        color: @accentColor;
+        &:hover {
+            color: @accentColor;
+        }
+    }
+}
+
+.article-tag-list {
+    overflow: hidden;
+    margin: 0 5px 0 0;
+    padding: 0;
+
+    li {
+        display: inline-block;
+        margin: 0 8px 5px 0;
+    }
+}
+
+article.article {
+    margin: 20px;
+}
+
+.article-tag-list-link {
+    display: inline-block;
+    padding: 0px 16px;
+    line-height: 30px;
+    font-size: 13px;
+    color: @secondaryTextColor;
+    // background: #e8e8e8;
+    // border-radius: 20px;
+
+    &:hover,
+    &:active {
+        font-size: 13px;
+        color: #fff;
+        // background: @accentColor;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.26);
+
+    }
+
+}
+
+.post-more {
+    display: inline-block;
+    padding: 0 6px;
+    font-weight: 500;
+    color: @primaryColor!important;
+    border: none!important;
+    border-radius: 3px;
+
+    &:hover,
+    &:active {
+        background:lighten(@lightPrimaryColor, 10%);
+    }
+}
+
+#page-nav {
+    margin: 30px 0 0;
+    text-align: center;
+
+    .inner {
+        display: inline-block;
+    }
+
+    a,
+    span {
+        display: inline-block;
+        line-height: 34px;
+        padding: 0 1em;
+        margin: 0 2px;
+        font-size: 14px;
+        color: @secondaryTextColor;
+        border-radius: 3px;
+        overflow: hidden;
+        .transition(.4s);
+    }
+
+    a:hover,
+    a:active {
+        color: @primaryColor;
+        background: @borderColor;
+    }
+
+    .current {
+        color: #fff;
+        background: @primaryColor;
+    }
+
+}
+
+@media screen and (max-width:760px) {
+    .post-title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .post-more {
+        height: 28px;
+        line-height: 28px;
+        font-size: 13px;
+    }
+
+}
+
+div.categorate-root-container {
+    margin: 5px 5px 0 0;
+    padding: 0 6px;
+    background:#8bc34a;
+
+    a.category-list-link {
+        padding: 0 16px;
+        font-size: 12px;
+        color: white;
+        line-height: 30px;
+    }
+
+    &:hover {
+        .category-list-link {
+            color: @accentColor;
+        }
+    }
+
+    .hoverLine(@accentColor)
+}
+
+ul.category-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li.category-list-item {
+        display: inline-block;
+        margin: 5px 5px 0 0;
+        padding: 0 6px;
+
+        a.category-list-link {
+            padding: 0 16px;
+            font-size: 12px;
+            color: white;
+            line-height: 30px;
+        }
+
+        &:hover {
+            .category-list-link {
+                color: @accentColor;
+            }
+        }
+    
+        .hoverLine(@accentColor)
+    }
+
+    li.category-list-item:nth-child(6n+1) {
+        background:#8bc34a;
+    }
+    li.category-list-item:nth-child(6n+2) {
+        background:#673ab7;
+    }
+    li.category-list-item:nth-child(6n+3) {
+        background:#ff9800;
+    }
+    li.category-list-item:nth-child(6n+4) {
+        background:#f44336;
+    }
+    li.category-list-item:nth-child(6n+5) {
+        background:#00abc0;
+    }
+    li.category-list-item:nth-child(6n+6) {
+        background:#2196f3;
+    }
+}

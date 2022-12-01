@@ -1,0 +1,6 @@
+<%# - list_categories() %>
+<%- get_category(site.categories, url_for, page.path) %>
+
+<%# console.log(get_category(site.categories, url_for, page.path)) %>
+
+<%- partial('archive', {pagination: config.archive}) %>

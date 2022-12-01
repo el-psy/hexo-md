@@ -1,0 +1,10 @@
+<section class="tags-wrap">
+  <%- list_tags({
+        transform: function (t,s,d) {
+            return '#' + t;
+        },
+        class:{
+            a: 'tag-list-link waves-effect waves-button'
+        }
+    }) %>  
+</section>

@@ -1,0 +1,16 @@
+<div id="tag-page-tag-container" class="thin">
+	
+	<%- list_tags({
+		transform: function (t,s,d) {
+			return '#' + t;
+		},
+		class:{
+			a: 'tag-list-link waves-effect waves-button'
+		}
+	}) %>  
+	<button id="tag-control" class="waves-effect waves-button">···</button>
+</div>
+
+
+
+<%- partial('archive', {pagination: config.archive}) %>

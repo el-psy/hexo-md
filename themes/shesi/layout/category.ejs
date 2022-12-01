@@ -1,0 +1,25 @@
+<%# index page categories %> 
+<% if (site.categories.length){ %>
+  <%- list_categories() %>
+<% } %>
+
+<%# = page.category %>
+
+<%# = console.log(site.categories) %>
+
+<%# = console.log(list_categories()) %>
+
+<%- get_category(site.categories, url_for, site.posts) %>
+
+<%# site.posts.each((item)=> console.log(item.categories)) %>
+
+<%# console.log(site.posts.each((item)=> item.categories)) %>
+<%# site.posts[-3].categories[0] %>
+
+<% console.log(get_category(site.categories, url_for, site.posts)) %>
+
+<script>
+	console.log(JSON.parse('<%- get_category(site.categories, url_for, site.posts) %>'));
+</script>
+
+category
